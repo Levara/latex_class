@@ -1,0 +1,105 @@
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{array}
+\usepackage{graphicx}
+%\usepackage{caption}
+\usepackage{subcaption}
+
+\title{Kernel (image processing)}
+\author{Hrvoje Leventić\\
+\emph{hrvoje.leventic@ferit.hr} }
+\date{May 2019}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    In image processing, a \textbf{kernel}, \textbf{convolution matrix}, or \textbf{mask} is a small matrix. It is used for \textit{blurring}, \textit{sharpening}, \textit{embossing}, \textit{edge detection}, and more. This is accomplished by doing a convolution between a kernel and an image. 
+\end{abstract}
+
+% Keywords command
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+\keywords{neki, test, ovo, ono}
+
+\tableofcontents
+
+%\begin{twocolumn}
+
+\section{Details}
+
+The general expression of a convolution is 
+\begin{equation}
+    g(x,y) = \omega * f(x,y) = \sum_{s=-a}^a \sum_{t=-b}^b \omega(s,t)f(x-s,y-t),
+\end{equation}
+where $g(x,y)$ is the filtered image, $f(x,y)$ is the original image, $\omega$ is the filter kernel. Every element of the filter kernel is considered by $$-a \leq s \leq a$$ and $-b \leq t \leq b$.
+
+Depending on the element values, a kernel can cause a wide range of effects. The above are just a few examples of effects achievable by convolving kernels and images. 
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{.45\textwidth}
+        \centering\includegraphics[width=\textwidth]{Vd-Unsharp_5x5.png}
+        \caption{pero}\label{fig:pero}
+    \end{subfigure}
+    \begin{subfigure}[t]{.45\textwidth}
+        \centering\vbox{%
+        $$
+            \begin{bmatrix}
+             1 & 1 & 1 \\
+             1 & 1 & 1 \\
+             1 & 1 & 1 \\
+            \end{bmatrix}
+        $$
+        }
+        
+        \caption{pero}\label{fig:pero}
+    \end{subfigure}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{itemize}
+    \item Prvi dio
+    \item drugi dio
+    \item treći dio
+    \item alo alo 
+\end{itemize}
+
+\subsection{Origin}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}[t]{.45\linewidth}
+        \centering\includegraphics[width=\textwidth]{Vd-Blur1.png}
+        \caption{Prvi subfigure}\label{fig:1a}
+    \end{subfigure} \qquad
+    \begin{subfigure}[t]{0.45\linewidth}
+        \centering\includegraphics[width=\textwidth]{Vd-Blur1.png}
+        \caption{Prvi subfigure lorem ipsum dolor sit amet abrakadabra alo loreme alo ipsume alo braleee!}\label{fig:1b}
+    \end{subfigure}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+Na koji način ide referenciranje? Referenciramo korištenjem labela koje smo zadali. Na slici \ref{fig:1a} je prvi subfigure, a na slici \ref{fig:1b} je drugi subfigure, dok u konačnici možete cijelu sliku referencirati pomoću \ref{fig:my_label}.
+\section{Convolution}
+
+\subsection{Edge Handling}
+
+\subsection{Normalization}
+
+\section{References}
+
+\section{External Links}
+
+%\end{twocolumn}
+
+\end{document}
