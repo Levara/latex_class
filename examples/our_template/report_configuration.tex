@@ -1,0 +1,273 @@
+% ****************************************************************************
+% ****************************************************************************
+% This file contains configuration commands. Add your custom commands to 
+% the bottom of this file
+% ****************************************************************************
+% ****************************************************************************
+
+
+
+
+% ****************************************************************************************************
+% 1. Set the encoding of your files. UTF-8 is the only sensible encoding nowadays. If you can't read
+% äöüßáéçèê∂åëæƒÏ€ then change the encoding setting in your editor, not the line below. If your editor
+% does not support utf8 use another editor!
+% ****************************************************************************************************
+\PassOptionsToPackage{utf8}{inputenc}
+  \usepackage{inputenc}
+
+\PassOptionsToPackage{T1}{fontenc} % T2A for cyrillics
+  \usepackage{fontenc}
+
+\usepackage{lmodern}
+
+% ****************************************************************************************************
+% 2. Personal data and user ad-hoc commands (insert your own data here)
+% ****************************************************************************************************
+%\newcommand{\myTitle}{Segmentation and Analysis of Left Atrial Appendage}
+\newcommand{\documentTitle}{Technical Report Template File}
+\newcommand{\documentSubtitle}{Add subtitle if applicable\xspace}
+\newcommand{\documentType}{Technical Report\xspace}
+\newcommand{\documentDate}{2018\xspace}
+\newcommand{\documentLocation}{Osijek\xspace}
+\newcommand{\uni}{Josip Juraj Strossmayer University of Osijek\xspace}
+\newcommand{\faculty}{Faculty of Electrical Engineering, Computer Science and Information Technology Osijek\xspace}
+\newcommand{\department}{Department of Software Engineering\xspace}
+\newcommand{\country}{Croatia\xspace}
+\newcommand{\location}{Croatia\xspace}
+
+
+\newcommand{\headerLocation}{FERIT Osijek\\ J. J. Strossmayer University of Osijek\xspace}
+\newcommand{\headerTime}{July 30, 2018\xspace}
+
+
+
+%%% AUTHORS: Default institutional data defined in \uni \faculty and \department
+%%% Change if author if from a different institution
+\newcommand{\firstAuthor}{Hrvoje Leventić\xspace}
+\newcommand{\firstAuthorEmail}{hrvoje.leventic@ferit.hr\xspace}
+\newcommand{\firstAuthorUni}{\uni\xspace}
+\newcommand{\firstAuthorFaculty}{\faculty\xspace}
+\newcommand{\firstAuthorDepartment}{\department\xspace}
+\newcommand{\firstAuthorCountry}{\country\xspace}
+
+\newcommand{\secondAuthor}{Irena Galić\xspace}
+\newcommand{\secondAuthorEmail}{irena.galic@ferit.hr\xspace}
+\newcommand{\secondAuthorUni}{\uni\xspace}
+\newcommand{\secondAuthorFaculty}{\faculty\xspace}
+\newcommand{\secondAuthorDepartment}{\department\xspace}
+\newcommand{\secondAuthorCountry}{\country\xspace}
+
+\newcommand{\thirdAuthor}{Marija Habijan\xspace}
+\newcommand{\thirdAuthorEmail}{marija.habijan@ferit.hr\xspace}
+\newcommand{\thirdAuthorUni}{\uni\xspace}
+\newcommand{\thirdAuthorFaculty}{\faculty\xspace}
+\newcommand{\thirdAuthorDepartment}{\department\xspace}
+\newcommand{\thirdAuthorCountry}{\country\xspace}
+
+\newcommand{\fourthAuthor}{Krešimir Romić\xspace}
+\newcommand{\fourthAuthorEmail}{kresimir.romic@ferit.hr\xspace}
+\newcommand{\fourthAuthorUni}{\uni\xspace}
+\newcommand{\fourthAuthorFaculty}{\faculty\xspace}
+\newcommand{\fourthAuthorDepartment}{\department\xspace}
+\newcommand{\fourthAuthorCountry}{\country\xspace}
+
+\newcommand{\fifthAuthor}{Zdravko Krpić\xspace}
+\newcommand{\fifthAuthorEmail}{zdravko.krpic@ferit.hr\xspace}
+\newcommand{\fifthAuthorUni}{\uni\xspace}
+\newcommand{\fifthAuthorFaculty}{\faculty\xspace}
+\newcommand{\fifthAuthorDepartment}{\department\xspace}
+\newcommand{\fifthAuthorCountry}{\country\xspace}
+
+\newcommand{\sixthAuthor}{Filip Novoselnik\xspace}
+\newcommand{\sixthAuthorEmail}{filip.novoselnik@ferit.hr\xspace}
+\newcommand{\sixthAuthorUni}{\uni\xspace}
+\newcommand{\sixthAuthorFaculty}{\faculty\xspace}
+\newcommand{\sixthAuthorDepartment}{\department\xspace}
+\newcommand{\sixthAuthorCountry}{\country\xspace}
+
+
+% ****************************************************************************************************
+% 3. Loading some handy packages
+% ****************************************************************************************************
+% ********************************************************************
+% Packages with options that might require adjustments
+% ********************************************************************
+\PassOptionsToPackage{english}{babel} % change this to your language(s), main language last
+% Spanish languages need extra options in order to work with this template
+%\PassOptionsToPackage{spanish,es-lcroman}{babel}
+    \usepackage{babel}
+
+\usepackage{csquotes}
+\PassOptionsToPackage{%
+  %backend=biber,bibencoding=utf8, %instead of bibtex
+  backend=bibtex8,bibencoding=ascii,%
+  language=auto,%
+  style=numeric-comp,%
+  %style=authoryear-comp, % Author 1999, 2010
+  %bibstyle=authoryear,dashed=false, % dashed: substitute rep. author with ---
+  sorting=nyt, % name, year, title
+  maxbibnames=10, % default: 3, et al.
+  backref=true,%
+  natbib=true % natbib compatibility mode (\citep and \citet still work)
+}{biblatex}
+    \usepackage{biblatex}
+
+\PassOptionsToPackage{fleqn}{amsmath}       % math environments and more by the AMS
+  \usepackage{amsmath}
+
+% ********************************************************************
+% General useful packages
+% ********************************************************************
+\usepackage{graphicx} %
+\usepackage{scrhack} % fix warnings when using KOMA with listings package
+\usepackage{xspace} % to get the spacing after macros right
+\PassOptionsToPackage{printonlyused,smaller}{acronym}
+  \usepackage{acronym} % nice macros for handling all acronyms in the thesis
+  %\renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms --> no longer working
+  %\renewcommand*{\acsfont}[1]{\textsc{#1}}
+  %\renewcommand*{\aclabelfont}[1]{\acsfont{#1}}
+  %\def\bflabel#1{{#1\hfill}}
+  \def\bflabel#1{{\acsfont{#1}\hfill}}
+  \def\aclabelfont#1{\acsfont{#1}}
+% ****************************************************************************************************
+%\usepackage{pgfplots} % External TikZ/PGF support (thanks to Andreas Nautsch)
+%\usetikzlibrary{external}
+%\tikzexternalize[mode=list and make, prefix=ext-tikz/]
+% ****************************************************************************************************
+
+
+\usepackage{titlesec}
+\titleformat{\chapter}
+{\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+
+%\usepackage[a4paper,bindingoffset=0.2in,%
+%left=0.6in,right=0.5in,top=1.2in,bottom=1.5in,%
+%footskip=.25in]{geometry}
+
+
+
+\usepackage{caption}
+\captionsetup{font=small}
+
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{siunitx}
+\usepackage{lscape}
+\usepackage{url}
+\def\UrlBreaks{\do\/\do-}
+\usepackage{breakurl}
+\usepackage{hyperref}
+\hypersetup{breaklinks=true}
+\usepackage{authblk}
+\usepackage{fancyhdr}
+\usepackage{ragged2e} 
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{array}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{afterpage}
+
+\renewcommand*{\thesubfigure}{\alph{subfigure}}
+% ********************************************************************
+% General useful packages
+% ********************************************************************
+\usepackage{graphicx} %
+\usepackage{scrhack} % fix warnings when using KOMA with listings package
+\usepackage{xspace} % to get the spacing after macros right
+\PassOptionsToPackage{printonlyused,smaller}{acronym}
+  \usepackage{acronym} % nice macros for handling all acronyms in the thesis
+  %\renewcommand{\bflabel}[1]{{#1}\hfill} % fix the list of acronyms --> no longer working
+  %\renewcommand*{\acsfont}[1]{\textsc{#1}}
+  %\renewcommand*{\aclabelfont}[1]{\acsfont{#1}}
+  %\def\bflabel#1{{#1\hfill}}
+  \def\bflabel#1{{\acsfont{#1}\hfill}}
+  \def\aclabelfont#1{\acsfont{#1}}
+% ****************************************************************************************************
+%\usepackage{pgfplots} % External TikZ/PGF support (thanks to Andreas Nautsch)
+%\usetikzlibrary{external}
+%\tikzexternalize[mode=list and make, prefix=ext-tikz/]
+% ****************************************************************************************************
+
+
+% ****************************************************************************************************
+% 4. Setup floats: tables, (sub)figures, and captions
+% ****************************************************************************************************
+\usepackage{tabularx} % better tables
+  \setlength{\extrarowheight}{3pt} % increase table row height
+\newcommand{\tableheadline}[1]{\multicolumn{1}{l}{\spacedlowsmallcaps{#1}}}
+\newcommand{\myfloatalign}{\centering} % to be used with each float for alignment
+\usepackage{subfig}
+\usepackage{eurosym}
+
+\usepackage{xcolor} %% URL and link colors
+\hypersetup{
+    colorlinks,
+    linkcolor={green!50!black},
+    citecolor={green!50!black},
+    urlcolor={red!80!black}
+}
+
+
+
+% ***************************************************************************************************
+% Configure constraints for placing floats on pages
+%    FIXES MOST PROBLEMS WITH PLACING FLOATS
+% ***************************************************************************************************
+
+\setcounter{topnumber}{2} %maximum number of floats at top of page - 	default:2
+\setcounter{bottomnumber}{2} %maximum number of floats at bottom of page - default:1
+\setcounter{totalnumber}{4} %maximum number of floats on a page - default:3
+\renewcommand{\topfraction}{0.8} %maximum fraction of page for floats at top default:0.7
+\renewcommand{\bottomfraction}{0.85} % 	maximum fraction of page for floats at bottom default:	0.3
+\renewcommand{\textfraction}{0.15} % 	minimum fraction of page for text default:0.2
+\renewcommand{\floatpagefraction}{0.7} %	minimum fraction of floatpage that should have floats 	default: 0.5 
+
+
+
+
+
+
+
+% *******************************************************************
+%  Useful custom commands
+% *******************************************************************
+\algnewcommand\algorithmicforeach{\textbf{for each }}
+\algnewcommand\ForEach{\item[ \algorithmicforeach]}
+\renewcommand{\algorithmicforall}{\textbf{for each}}
+\renewcommand{\theequation}{\arabic{chapter}-\arabic{equation}}
+\renewcommand\thealgorithm{\thechapter.\arabic{algorithm}} 
+%\@addtoreset{algorithm}{chapter} 
+
+%\renewcommand*{\bibfont}{\smaller}
+
+\newcommand{\argmin}{\operatornamewithlimits{arg\ min}}
+\newcommand{\argmax}{\operatornamewithlimits{arg\ max}}
+\newcommand{\defeq}{\stackrel{\triangle}{=}} %dodao
+\renewcommand{\vec}[1]{\mathbf{#1}} %dodao
+\newcommand{\operator}[2]{\mathop{#1}_{#2}} %dodao
+\newtheorem{mydef}{Definition}%dodao
+
+
+
+% *******************************************************************
+%  ADD YOUR CUSTOM COMMANDS HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+% *******************************************************************
+
+\newcommand{\laa}{\ac{LAA}\ }
+\newcommand{\la}{\ac{LA}\ }
+\newcommand{\lv}{\ac{LV}\ }
+\newcommand{\ra}{\ac{RA}\ }
+\newcommand{\rv}{\ac{RV}\ }
+\newcommand{\cvs}{\ac{CVS}\ }
+\newcolumntype{L}{>{\raggedright\arraybackslash}m{.9\textwidth}}
+\newcolumntype{I}{>{\raggedright\arraybackslash}m{.02\textwidth}}
+
+
+
+
+

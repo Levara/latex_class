@@ -4,9 +4,15 @@
 
 - http://detexify.kirelabs.org/classify.html
 - subfigure/subfig/subcaption razlika: https://tex.stackexchange.com/questions/122314/figures-what-is-the-difference-between-using-subfig-or-subfigure
+    - prvo caption pa label za subcaption
+
 - equation editor: 
   https://www.codecogs.com/latex/eqneditor.php
  
+## Tutoriali 
+
+- https://www.overleaf.com/learn/latex/Free_online_introduction_to_LaTeX_(part_1) 
+- https://www.overleaf.com/learn/latex/Tutorials
 
 
 ## Intro vježbe
@@ -31,9 +37,6 @@
 
 
 # Hints
-
-- prvo caption pa label za subcaption
-    - primjer: XXXXXXXXXXXXXXXXXXXx
 
 - Latex primjene van radova:
     * latex formulas in matlab

@@ -1,0 +1,57 @@
+\documentclass[a4paper]{article}
+
+\input{report_configuration.tex}
+
+%%%% ADD YOUR BIB FILE HERE
+\bibliography{references.bib}
+
+\begin{document}
+
+\input{content/titlepages.tex}
+
+
+%************************************************
+%************************************************
+% CONTENT OF THE DOCUMENT GOES HERE
+%************************************************
+%************************************************
+
+\newpage\null\thispagestyle{empty}\newpage
+\pagestyle{plain}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\justify
+
+
+\input{content/abstract.tex}
+
+
+% Either add your sections as additional tex files
+% or add the text to this file 
+\input{content/section1.tex}
+
+
+\input{content/maincontent.tex}
+
+
+
+
+%************************************************
+%************************************************
+% ACRONYMS AND BIBLIOGRAPHY GOES HERE
+%************************************************
+%************************************************
+
+
+\clearpage
+\section*{Acronyms}%
+\label{sec:acronyms}
+
+\input{content/acronyms.tex}
+	
+\clearpage	
+	\printbibliography
+	
+	
+	
+\end{document}
