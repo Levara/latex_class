@@ -19,20 +19,26 @@
 
 ### 1. Overleaf
 
-1. Basic starter project - New project -> Example project
-    - Osnovni paketi
-    - Osnovne naredbe: \documentclass, \title, \author, \chapter, \section,
-      \subsection, \paragraf
-    - Text styles
-    - Naredbe (commands) vs. Okoline (environments)
-    - Referenciranje dijelova, slika, formula itd.
-    - Bibtex: file, naredbe (\bibliographystyle, \cite)
+* Basic starter project - New project -> Example project*
+
+- Osnovni paketi
+- Osnovne naredbe: \documentclass, \title, \author, \chapter, \section,
+  \subsection, \paragraf
+- Text styles
+- Naredbe (commands) vs. Okoline (environments)
+- Referenciranje dijelova, slika, formula itd.
+- Bibtex: file, naredbe (\bibliographystyle, \cite)
 
 ### 2. Prikaz naprednih funkcionalnosti
 
+- tables
 - subfigures, subcaptions
 - figure\*, table\*, twocolumns
 - algoritmi, ispis koda
+
+### 3. New commands / renew commands
+### 4. input/include
+
 
 
 
