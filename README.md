@@ -69,5 +69,13 @@
   ```
 
 
+# Zotero integration
 
+Zotero is a software for bibliography management. 
+
+Some useful plugins for Zotero:
+
+- Zotfile - automatically extract annotations from pdf files and add them as notes to the Zotero entries for that paper.
+- BetterBibtex - automatically sync your exported bibliography in `.bib` file with Zotero. 
+  Each change in Zotero triggers a refresh of the `.bib` file with the changed data.
 
