@@ -1,0 +1,35 @@
+% For tables use
+\begin{table}[t]
+% table caption is above the table
+  \centering
+  \caption{Dice coefficients overlap (n=17). Table shows dice overlap between
+    segmentations of our two experts (E1, E2) and the overlap of segmentation results with our method between
+  each of the experts' segmentations.} 
+  \label{tab:dices}
+  % Give a unique label
+% For LaTeX tables use
+\begin{tabular}{llll} 
+  \hline\noalign{\smallskip}
+  Dataset & dice(E1, E2) & dice(E1, our) & dice(E2, our) \\
+  \noalign{\smallskip}\hline\noalign{\smallskip}
+  D1 & 88.50\% & 94.58\% & 90.51\% \\
+  D2 & 98.94\% & 93.24\% & 92.43\% \\
+  D3 & 82.16\% & 87.28\% & 89.32\% \\
+  D4 & 96.37\% & 97.11\% & 96.29\% \\
+  D5 & 94.78\% & 92.87\% & 94.29\% \\
+  D6 & 99.35\% & 96.07\% & 96.03\% \\
+  D7 & 84.77\% & 86.73\% & 91.03\% \\
+  D8 & 93.74\% & 96.25\% & 94.72\% \\
+  D9 & 87.65\% & 94.61\% & 85.91\% \\
+  D10 & 90.71\% & 94.90\% & 91.66\% \\
+  D11 & 92.85\% & 94.56\% & 94.60\% \\
+  D12 & 92.94\% & 93.15\% & 87.42\% \\
+  D13 & 91.76\% & 76.78\% & 81.41\% \\
+  D14 & 97.09\% & 93.41\% & 91.96\% \\
+  D15 & 95.85\% & 96.07\% & 94.15\% \\
+  D16 & 90.30\% & 91.02\% & 92.98\% \\
+  D17 & 97.40\% & 94.25\% & 92.94\% \\
+  Avg: & 92.66\% & 92.52\% & 91.63\% \\
+  \noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
